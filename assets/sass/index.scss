@@ -1,0 +1,45 @@
+@import 'introComponent';
+$base: 10px;
+$primary-color: red;
+@mixin commonStyles {
+    padding: $base;
+    @include customBorder(5px, dotted, black);
+    border-radius: 5px;
+}
+
+@mixin customBorder($width, $style, $color) {
+    border: {
+        width: $width;
+        style: $style;
+        color: $color;
+    }
+}
+body {
+    color: $primary-color;
+    ul {
+        list-style: disc;
+        li {
+            margin-left: $base;
+            &:hover {
+                color: if($base == 10px, $primary-color+#00f, blue); // Ternary operator
+                cursor: pointer;
+                transform: scaleY(1.2);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+.container {
+    width: 100%;
+    p {
+        color: blue;
+    }
+}
+header {
+    color: brown;
+    @include commonStyles;
+}
+footer {
+    color: cadetblue;
+    @include commonStyles;
+}

@@ -1,0 +1,42 @@
+body {
+  color: red;
+}
+body ul {
+  list-style: disc;
+}
+body ul li {
+  margin-left: 10px;
+}
+body ul li:hover {
+  color: magenta;
+  cursor: pointer;
+  transform: scaleY(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  width: 100%;
+}
+.container p {
+  color: blue;
+}
+
+header {
+  color: brown;
+  padding: 10px;
+  border-width: 5px;
+  border-style: dotted;
+  border-color: black;
+  border-radius: 5px;
+}
+
+footer {
+  color: cadetblue;
+  padding: 10px;
+  border-width: 5px;
+  border-style: dotted;
+  border-color: black;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=index.css.map */
